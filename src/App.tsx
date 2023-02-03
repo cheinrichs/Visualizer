@@ -9,158 +9,52 @@ if (typeof Highcharts === "object") {
   networkgraph(Highcharts);
 }
 
-var dirDist50 = "#E8544E",
-  dirDist10 = "#FFD265",
-  dirDistLess10 = "#2AA775";
-
 const options = {
-  chart: {
-    type: "networkgraph",
-  },
-  title: {
-    text: "Super Chart",
-  },
   series: [
     {
-      marker: {
-        radius: 13,
-      },
-      dataLabels: {
-        enabled: true,
-        linkFormat: "",
-        allowOverlap: true,
-        style: {
-          textOutline: false,
-        },
-      },
-      data: [
-        ["Seoul ICN", "Daegu"],
-        ["Seoul ICN", "Busan"],
-        ["Busan", "Seoul GMP"],
-        ["Busan", "Yangyang"],
-
-        ["Daegu", "Seoul GMP"],
-        ["Daegu", "Jeju"],
-
-        ["Seoul GMP", "Gwangju"],
-        ["Seoul GMP", "Yeosu"],
-        ["Seoul GMP", "Sacheon"],
-        ["Seoul GMP", "Ulsan"],
-        ["Seoul GMP", "Pohang"],
-
-        ["Jeju", "Gwangju"],
-        ["Jeju", "Gunsan"],
-        ["Jeju", "Wonju"],
-        ["Jeju", "Yangyang"],
-        ["Jeju", "Daegu"],
-        ["Jeju", "Yeosu"],
-        ["Jeju", "Sacheon"],
-        ["Jeju", "Ulsan"],
-        ["Jeju", "Busan"],
-        ["Jeju", "Cheongju"],
-      ],
+      marker: { radius: 13 },
       nodes: [
-        {
-          id: "Seoul ICN",
-          marker: {
-            radius: 30,
-          },
-          color: dirDist50,
-        },
-        {
-          id: "Daegu",
-          marker: {
-            radius: 10,
-          },
-          color: dirDistLess10,
-        },
-        {
-          id: "Busan",
-          marker: {
-            radius: 30,
-          },
-          color: dirDist50,
-        },
-        {
-          id: "Seoul GMP",
-          marker: {
-            radius: 20,
-          },
-          color: dirDist10,
-        },
-        {
-          id: "Jeju",
-          marker: {
-            radius: 30,
-          },
-          color: dirDist50,
-        },
-        {
-          id: "Gwangju",
-          marker: {
-            radius: 10,
-          },
-          color: dirDistLess10,
-        },
-        {
-          id: "Yeosu",
-          marker: {
-            radius: 10,
-          },
-          color: dirDistLess10,
-        },
-        {
-          id: "Sacheon",
-          marker: {
-            radius: 10,
-          },
-          color: dirDistLess10,
-        },
-        {
-          id: "Ulsan",
-          marker: {
-            radius: 10,
-          },
-          color: dirDistLess10,
-        },
-        {
-          id: "Pohang",
-          marker: {
-            radius: 20,
-          },
-          color: dirDist10,
-        },
-        {
-          id: "Gunsan",
-          marker: {
-            radius: 10,
-          },
-          color: dirDistLess10,
-        },
-        {
-          id: "Wonju",
-          marker: {
-            radius: 10,
-          },
-          color: dirDistLess10,
-        },
-        {
-          id: "Yangyang",
-          marker: {
-            radius: 10,
-          },
-          color: dirDistLess10,
-        },
-        {
-          id: "Cheongju",
-          marker: {
-            radius: 20,
-          },
-          color: dirDist10,
-        },
+        { marker: { radius: 70 }, id: "./App.tsx" },
+        { marker: { radius: 50 }, id: "./index.tsx" },
+        { marker: { radius: 10 }, id: "react-dom/client" },
+        { marker: { radius: 10 }, id: "@testing-library/react" },
+        { marker: { radius: 10 }, id: "./logo.svg" },
+        { marker: { radius: 10 }, id: "highcharts-react-official" },
+        { marker: { radius: 10 }, id: "highcharts/modules/networkgraph" },
+        { marker: { radius: 10 }, id: "./App.css" },
+        { marker: { radius: 10 }, id: "react" },
+        { marker: { radius: 10 }, id: "./reportWebVitals" },
+        { marker: { radius: 50 }, id: "./App.test.tsx" },
+        { marker: { radius: 10 }, id: "./index.css" },
+        { marker: { radius: 10 }, id: "./App" },
+        { marker: { radius: 10 }, id: "highcharts" },
       ],
+      data: [
+        ["./index.tsx", "react"],
+        ["./index.tsx", "react-dom/client"],
+        ["./index.tsx", "./index.css"],
+        ["./index.tsx", "./App"],
+        ["./index.tsx", "./reportWebVitals"],
+        ["./App.tsx", "react"],
+        ["./App.tsx", "./logo.svg"],
+        ["./App.tsx", "./App.css"],
+        ["./App.tsx", "highcharts"],
+        ["./App.tsx", "highcharts-react-official"],
+        ["./App.tsx", "highcharts/modules/networkgraph"],
+        ["./App.test.tsx", "react"],
+        ["./App.test.tsx", "@testing-library/react"],
+        ["./App.test.tsx", "./App"],
+      ],
+      dataLabels: {
+        allowOverlap: "true",
+        style: { textOutline: "false" },
+        linkFormat: "",
+        enabled: "true",
+      },
     },
   ],
+  chart: { type: "networkgraph" },
+  title: { text: "File Size and Connection Chart" },
 };
 
 function App() {
