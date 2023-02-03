@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Visualizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project has been built to help learn and visualize an existing code base by seeing which files connect. It's designed for front end projects that use react.
 
 ## Available Scripts
 
